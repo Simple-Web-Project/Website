@@ -6,3 +6,20 @@ body {
 img {
     width: 250px;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: #212529;
+        color: #f8f9fa;
+    }
+
+    a:visited {
+        color: #9759f6;
+        text-decoration: none;
+    }
+
+    a {
+        color: #599bf6;
+        text-decoration: none;
+    }
+}
