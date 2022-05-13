@@ -27,8 +27,8 @@ img {
 
 @media screen and (prefers-color-scheme: dark) {
     body {
-        background-color: #212529;
-        color: #F8F9FA;
+        background-color: #111;
+        color: #ccc;
     }
 
     a:visited {
@@ -50,19 +50,21 @@ img {
 
 index_style = """
 <style>
-.project-card {
-    background-color: #F8F9FA;
-    color: #212529;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin: .5rem;
-    padding: .5rem;
+.no-margin {
+    margin: 0;
+}
+
+section {
+    background-color: #eee;
+    color: #292529;
+    margin: 1rem auto;
+    padding: 1rem;
 }
 
 @media screen and (prefers-color-scheme: dark) {
-    .project-card {
-        background-color: #131618;
-        color: #F8F9FA;
+    section {
+        background-color: #222;
+        color: #ccc;
     }
 }
 
@@ -103,16 +105,16 @@ def generate_index(config: dict):
 
 
             index.write(f"""
-            <div class=\"project-card\">
-                <h3>
+            <section>
+                <h3 class="no-margin">
                     <a href=\"projects/{project_id}.html\">{project_name}</a> <a style=\"color: red\">{project_notice}</a>
                 </h3>
                 <p><span title=\"{instance_count} Instances\">🌐 <strong>{instance_count}</strong></span> • <span title="{onion_instance_count} Onion Instances\">🧅 <strong>{onion_instance_count}</strong></span></p>
 
-                <blockquote>
-                <p>{project_short_description}</p>
+                <blockquote class="no-margin">
+                <p class="no-margin">{project_short_description}</p>
                 </blockquote>
-            </div>
+            </section>
             """)
 
 
