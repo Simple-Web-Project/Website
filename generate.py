@@ -1,4 +1,5 @@
 import json
+import os
 import logging
 
 
@@ -119,6 +120,7 @@ def generate_index(config: dict):
         index.write(generic_ending)
 
 def generate_projects(config: dict):
+    os.mkdir("projects")
     for project in config["projects"]:
         id_ = project["id"]
         name = project.get("name") or "Unnamed Project"
@@ -236,6 +238,8 @@ def generate_projects(config: dict):
 
 
 def generate_instances(config: dict):
+    os.mkdir("instances") 
+
     for project in config["projects"]:
         id_ = project["id"]
         name = project.get("name") or "Unnamed Project"
