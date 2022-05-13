@@ -1,0 +1,192 @@
+{
+    "description": "We want to make the web more privacy friendly while also making it less \"bloated\", by which we mean that we want to remove all the unnecessary gunk that increases loading times. We also believe that most websites shouldn't require JavaScript to run. We create frontends to other websites that could use a simplified interface. Check out our projects below",
+    "contact": {
+        "email": "simpleweb@metalune.xyz",
+        "irc": "#simple-web@irc.libera.chat",
+        "matrix": {
+            "homeserver": "libera.chat",
+            "room": "#simple-web"
+        }
+
+    },
+    "projects": [
+        {
+            "id": "simplytranslate",
+            "name": "SimplyTranslate",
+            "short_description": "A frontend for various Translation Services like GoogleTranslate that keeps you anonymous from them",
+            "description": "We aim to provide fast and private translations to the user without wasting much overhead for extensive styling or JavaScript<br><br>The interface is designed to be fully compatible with all kinds of web browsers, including text-based ones.",
+            "source_code": "https://codeberg.org/SimpleWeb/SimplyTranslate-Web",
+            "screenshots": [
+                {
+                    "description": "Screenshot of SimplyTranslate using the Light Theme",
+                    "src": "simplytranslate_light.png"
+                },
+                {
+                    "description": "Screenshot of SimplyTranslate using the Dark Theme",
+                    "src": "simplytranslate_dark.png"
+                }
+            ],
+            "main_contributors": [
+                {
+                    "name": "fattalion"
+                },
+                {
+                    "name": "ManeraKai",
+                    "link": "https://manerakai.com"
+                },
+                {
+                    "name": "yyp",
+                    "link": "https://yerinalexey.srht.site"
+                },
+                {
+                    "name": "joelchrono12 (favicon)",
+                    "link": "https://joelchrono12.ml"
+                },
+                {
+                    "name": "metalune",
+                    "link": "https://metalune.xyz"
+                }
+            ],
+            "instances": [
+                "simplytranslate.org",
+                "st.tokhmi.xyz",
+                "translate.josias.dev",
+                "translate.namazso.eu",
+                "translate.riverside.rocks",
+                "st.manerakai.com",
+                "translate.bus-hit.me",
+                "simplytranslate.pussthecat.org",
+                "translate.northboot.xyz",
+                "translate.tiekoetter.com",
+                "simplytranslate.esmailelbob.xyz",
+                "translate.syncpundit.com",
+                "tl.vern.cc",
+                "translate.slipfox.xyz"
+            ],
+            "onion_instances": [
+                "fyng2tsmzmvxmojzbbwmfnsn2lrcyftf4cw6rk5j2v2huliazud3fjid.onion",
+                "xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid.onion"
+            ],
+            "official_tools": [
+                {
+                    "name": "SimplyTranslate Android App",
+                    "link": "https://github.com/ManeraKai/simplytranslate_mobile"
+                },
+                {
+                    "name": "SimplyTranslate iOS App",
+                    "link": "https://codeberg.org/SimpleWeb/SimplyTranslate-iOS"
+                },
+                {
+                    "name": "SimplyTranslate CLI App",
+                    "link": "https://codeberg.org/SimpleWeb/SimplyTranslate-cli"
+                }
+            ],
+            "unofficial_tools": [
+                {
+                    "name": "STranslate",
+                    "link": "https://codeberg.org/justwolf/stranslate"
+                },
+                {
+                    "name": "stcli",
+                    "link": "https://git.076.ne.jp/novaburst/stcli"
+                }
+            ],
+            "shoutouts": [
+                {
+                    "name": "gtranslate",
+                    "link": "https://git.sr.ht/~yerinalexey/gtranslate"
+                },
+                {
+                    "name": "Lingva Translate",
+                    "link": "https://github.com/TheDavidDelta/lingva-translate"
+                }
+            ]
+        },
+        {
+            "id": "simpleertube",
+            "name": "SimpleerTube",
+            "short_description": "A frontend for SepiaSearch and PeerTube",
+            "description": "SimpleerTube is a frontend for SepiaSearch and Peertube Instances that runs without any JavaScript",
+            "source_code": "https://codeberg.org/SimpleWeb/SimpleerTube",
+            "screenshots": [
+                {
+                    "description": "Screenshot of the SimpleerTube frontpage showing SepiaSearch functionality using the Light Theme",
+                    "src": "simpleertube_light_1.png"
+                },
+                {
+                    "description": "Screenshot of diode.zone being accessed through SimpleerTube using the Light Theme",
+                    "src": "simpleertube_light_2.png"
+                },
+                {
+                    "description": "Screenshot of the SimpleerTube frontpage showing SepiaSearch functionality using the Dark Theme",
+                    "src": "simpleertube_dark_1.png"
+                },
+                {
+                    "description": "Screenshot of diode.zone being accessed through SimpleerTube using the Dark Theme",
+                    "src": "simpleertube_dark_2.png"
+                }
+            ],
+            "main_contributors": [
+                {
+                    "name": "southerntofu",
+                    "link": "https://staticadventures.netlib.re"
+                },
+                {
+                    "name": "metalune",
+                    "link": "https://metalune.xyz"
+                }
+            ],
+            "instances": [
+                "tube.simple-web.org",
+                "tube.fr.tild3.org",
+                "stube.alefvanoon.xyz",
+                "st.phreedom.club",
+                "simpleertube.esmailelbob.xyz"
+            ]
+        },
+        {
+            "id": "simplynews",
+            "name": "SimplyNews",
+            "short_description": "A frontend for numerous article-based websites",
+            "description": "A frontend for numerous article-based websites.<br><br><a style=\"color: red\">The legal grounds for hosting this are somewhat questionabble depending on where you're located. So please inform yourself beforehand and host at your own risk.</a>",
+            "source_code": "https://codeberg.org/SimpleWeb/SimplyNews-Web",
+            "screenshots": [
+                {
+                    "description": "Screenshot of SimplyNews News Tab",
+                    "src": "simplynews_news.png"
+                },
+                {
+                    "description": "Screenshot of SimplyNews Tech Tab",
+                    "src": "simplynews_tech.png"
+                },
+                {
+                    "description": "Screenshot of SimplyNews Gaming Tab",
+                    "src": "simplynews_gaming.png"
+                }
+            ],
+            "main_contributors": [
+                {
+                    "name": "ManeraKai",
+                    "link": "https://manerakai.com"
+                }
+            ],
+            "instances": [
+                "simplynews.manerakai.com"
+            ]
+        },
+        {
+            "id": "porninvidious",
+            "name": "PornInvidious",
+            "short_description": "A frontend to xvideos.com",
+            "description": "A frontend to xvideos.com",
+            "notice": "NSFW!",
+            "source_code": "https://codeberg.org/SimpleWeb/PornInvidious",
+            "screenshots": [
+                {
+                    "description": "Screenshot of PornInvidious Homescreen, showing 6 Thumbnails",
+                    "src": "porninvidious.png"
+                }
+            ]
+        }
+    ]
+}
