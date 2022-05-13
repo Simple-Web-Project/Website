@@ -1,5 +1,5 @@
 {
-    "description": "We want to make the web more privacy friendly while also making it less \"bloated\", by which we mean that we want to remove all the unnecessary gunk that increases loading times. We also believe that most websites shouldn't require JavaScript to run. We create frontends to other websites that could use a simplified interface. Check out our projects below",
+    "description": "We want to make the web more privacy friendly while also making it less \"bloated\", by which we mean that we want to remove all the unnecessary gunk that increases loading times. We also believe that most websites shouldn't require JavaScript to run. We create frontends to other websites that could use a simplified interface.",
     "contact": {
         "email": "simpleweb@metalune.xyz",
         "irc": "#simple-web@irc.libera.chat",
