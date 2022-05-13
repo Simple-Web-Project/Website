@@ -27,7 +27,7 @@ img {
 
 @media screen and (prefers-color-scheme: dark) {
     body {
-        background-color: #111;
+        background-color: #101316;
         color: #ccc;
     }
 
@@ -63,7 +63,7 @@ section {
 
 @media screen and (prefers-color-scheme: dark) {
     section {
-        background-color: #222;
+        background-color: #16191c;
         color: #ccc;
     }
 }
