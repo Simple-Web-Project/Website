@@ -107,7 +107,7 @@ def generate_index(config: dict):
                 <h3>
                     <a href=\"projects/{project_id}.html\">{project_name}</a> <a style=\"color: red\">{project_notice}</a>
                 </h3>
-                <p>🌐 <strong>{instance_count}</strong> • 🧅 <strong>{onion_instance_count}</strong></p>
+                <p><span title=\"{instance_count} Instances\">🌐 <strong>{instance_count}</strong></span> • <span title="{onion_instance_count} Onion Instances\">🧅 <strong>{onion_instance_count}</strong></span></p>
 
                 <blockquote>
                 <p>{project_short_description}</p>
