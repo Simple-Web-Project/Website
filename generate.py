@@ -52,11 +52,20 @@ index_style = """
 <style>
 .project-card {
     background-color: #F8F9FA;
+    color: #212529;
     text-overflow: ellipsis;
     overflow: hidden;
     margin: .5rem;
     padding: .5rem;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    .project-card {
+        background-color: #131618;
+        color: #F8F9FA;
+    }
+}
+
 </style>
 """
 
@@ -120,7 +129,8 @@ def generate_index(config: dict):
         index.write(generic_ending)
 
 def generate_projects(config: dict):
-    os.mkdir("projects")
+    if not os.path.exists("projects"):
+        os.mkdir("projects")
     for project in config["projects"]:
         id_ = project["id"]
         name = project.get("name") or "Unnamed Project"
@@ -238,7 +248,8 @@ def generate_projects(config: dict):
 
 
 def generate_instances(config: dict):
-    os.mkdir("instances") 
+    if not os.path.exists("instances"):
+        os.mkdir("instances")
 
     for project in config["projects"]:
         id_ = project["id"]
