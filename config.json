@@ -149,7 +149,7 @@
             "name": "SimplyNews",
             "short_description": "A frontend for numerous article-based websites",
             "description": "A frontend for numerous article-based websites.<br><br><a style=\"color: red\">The legal grounds for hosting this are somewhat questionabble depending on where you're located. So please inform yourself beforehand and host at your own risk.</a>",
-            "source_code": "https://codeberg.org/SimpleWeb/SimplyNews-Web",
+            "source_code": "https://codeberg.org/SimpleWeb/SimplyNews",
             "screenshots": [
                 {
                     "description": "Screenshot of SimplyNews News Tab",
