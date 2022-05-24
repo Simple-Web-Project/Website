@@ -62,11 +62,17 @@
                 "simplytranslate.esmailelbob.xyz",
                 "translate.syncpundit.com",
                 "tl.vern.cc",
-                "translate.slipfox.xyz"
+                "translate.slipfox.xyz",
+                "st.privacydev.net",
+                "translate.beparanoid.de"
             ],
             "onion_instances": [
                 "fyng2tsmzmvxmojzbbwmfnsn2lrcyftf4cw6rk5j2v2huliazud3fjid.onion",
-                "xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid.onion"
+                "xxtbwyb5z5bdvy2f6l2yquu5qilgkjeewno4qfknvb3lkg3nmoklitid.onion",
+                "translate.prnoid54e44a4bduq5due64jkk7wcnkxcp5kv3juncm7veptjcqudgyd.onion"
+            ],
+            "i2p_instances": [
+                "kmnkkp4v4ublygtnyq46oacy3qw75nrxxniriuaersumw7bfsm2a.b32.i2p"
             ],
             "official_tools": [
                 {
