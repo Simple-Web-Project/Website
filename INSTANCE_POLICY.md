@@ -1,7 +1,7 @@
 # Instance Policy
 
 Things that are not permitted:
-1. Cloudflare
+1. Cloudflare (Only the proxying part)
 2. Trackers
 3. Additional JS (Reason: This instance list is intended for people who want a stock experience and so they can kind of expect what they get themselves into when they load an instance on that list)
 
