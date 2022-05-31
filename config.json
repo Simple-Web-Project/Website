@@ -144,7 +144,7 @@
             ],
             "instances": [
                 "tube.simple-web.org",
-                "simpleertube.esmailelbob.xyz"
+                "simpleertube.esmailelbob.xyz",
             ]
         },
         {
@@ -174,7 +174,8 @@
                 }
             ],
             "instances": [
-                "simplynews.manerakai.com"
+                "simplynews.manerakai.com",
+                "simplynews.esmailelbob.xyz"
             ]
         },
         {
