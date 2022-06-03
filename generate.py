@@ -102,6 +102,7 @@ def generate_index(config: dict):
             instance_count = len(project.get("instances") or [])
             onion_instance_count = len(project.get("onion_instances") or [])
             i2p_instance_count = len(project.get("i2p_instances") or [])
+            loki_instance_count = len(project.get("loki_instances") or [])
             project_notice = project.get("notice") or ""
 
 
@@ -110,7 +111,7 @@ def generate_index(config: dict):
                 <h3 class="no-margin">
                     <a href=\"projects/{project_id}.html\">{project_name}</a> <a style=\"color: red\">{project_notice}</a>
                 </h3>
-                <p><span title=\"{instance_count} Instances\">🌐 <strong>{instance_count}</strong></span> • <span title=\"{onion_instance_count} Onion Instances\">🧅 <strong>{onion_instance_count}</strong></span> • <span title=\"{i2p_instance_count} I2P Instances\">⬤ <strong>{i2p_instance_count}</strong></span></p>
+                <p><span title=\"{instance_count} Instances\">🌐 <strong>{instance_count}</strong></span> • <span title=\"{onion_instance_count} Onion Instances\">🧅 <strong>{onion_instance_count}</strong></span> • <span title=\"{i2p_instance_count} I2P Instances\">⬤ <strong>{i2p_instance_count}</strong></span> • <span title=\"{loki_instance_count} Lokinet Instances\">⧖ <strong>{loki_instance_count}</strong></span></p>
 
                 <blockquote class="no-margin">
                 <p class="no-margin">{project_short_description}</p>
@@ -144,6 +145,8 @@ def generate_projects(config: dict):
         instances = project.get("instances") or []
         onion_instances = project.get("onion_instances") or []
         i2p_instances = project.get("i2p_instances") or []
+        loki_instances = project.get("loki_instances") or []
+
         official_tools = project.get("official_tools") or []
         unofficial_tools = project.get("unofficial_tools") or []
         shoutouts = project.get("shoutouts") or []
@@ -215,6 +218,17 @@ def generate_projects(config: dict):
 
                 f.write("</ul>")
 
+            # Lokinet Instances
+            if len(loki_instances) > 0:
+                f.write("<h2>⧖ Lokinet Instances (" + str(len(loki_instances)) + ")</h2>")
+                f.write(f"<p>If you want to use this list of instances in your project, just refer to <a href=\"https://simple-web.org/instances/{id_}_onion\">https://simple-web.org/instances/{id_}_loki</a></p>")
+
+                f.write("<ul>")
+                for instance in loki_instances:
+                    f.write(f"<li><a href=\"http://{instance}\">{instance}</a></li>")
+
+                f.write("</ul>")
+
             f.write("<h3>Want your instance to be added to the list?</h2>")
             f.write("<p>You can refer to the <a href=\"https://codeberg.org/SimpleWeb/Website/src/branch/master/README.md\">README.md</a> of this Website for more information.</p>")
 
@@ -272,6 +286,7 @@ def generate_instances(config: dict):
         instances = project.get("instances") or []
         onion_instances = project.get("onion_instances") or []
         i2p_instances = project.get("i2p_instances") or []
+        loki_instances = project.get("loki_instances") or []
 
         if len(instances) > 0:
             with open(f"instances/{id_}", "w") as f:
@@ -286,6 +301,11 @@ def generate_instances(config: dict):
         if len(i2p_instances) > 0:
             with open(f"instances/{id_}_i2p", "w") as f:
                 for instance in i2p_instances:
+                    f.write(f"{instance}\n")
+
+        if len(loki_instances) > 0:
+            with open(f"instances/{id_}_loki", "w") as f:
+                for instance in loki_instances:
                     f.write(f"{instance}\n")
 
 
