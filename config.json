@@ -34,7 +34,7 @@
         {
             "name": "Lokinet",
             "id": "_loki",
-            "icon": "⧖",
+            "icon": "🮕 ",
             "list_name": "loki_instances",
             "protocol": "http"
         }
