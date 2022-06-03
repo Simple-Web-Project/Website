@@ -77,6 +77,7 @@ generic_ending = """
 """
 
 
+
 def load_config() -> dict:
     config_file = open("config.json")
     config = json.load(config_file)
@@ -99,10 +100,8 @@ def generate_index(config: dict):
             project_id = project["id"]
             project_name = project.get("name") or "Unnamed Project"
             project_short_description = project.get("short_description") or ""
-            instance_count = len(project.get("instances") or [])
-            onion_instance_count = len(project.get("onion_instances") or [])
-            i2p_instance_count = len(project.get("i2p_instances") or [])
-            loki_instance_count = len(project.get("loki_instances") or [])
+
+
             project_notice = project.get("notice") or ""
 
 
@@ -110,9 +109,31 @@ def generate_index(config: dict):
             <section>
                 <h3 class="no-margin">
                     <a href=\"projects/{project_id}.html\">{project_name}</a> <a style=\"color: red\">{project_notice}</a>
-                </h3>
-                <p><span title=\"{instance_count} Instances\">🌐 <strong>{instance_count}</strong></span> • <span title=\"{onion_instance_count} Onion Instances\">🧅 <strong>{onion_instance_count}</strong></span> • <span title=\"{i2p_instance_count} I2P Instances\">⬤ <strong>{i2p_instance_count}</strong></span> • <span title=\"{loki_instance_count} Lokinet Instances\">⧖ <strong>{loki_instance_count}</strong></span></p>
+                </h3><p>
+            """)
 
+            ## BUILD INSTANCE DESCRIPTION BAR ##
+
+            instance_desc_bar = ""
+            for itype in config["instance_types"]:
+                count = len(project.get(itype["list_name"]) or [])
+                if count == 0:
+                    continue
+
+                display_name = itype["name"] + " Instances"
+                icon = itype["icon"]
+
+                if len(instance_desc_bar) > 0:
+                    instance_desc_bar += " • "
+                instance_desc_bar += f"<span title=\"{count} {display_name}\">{icon} <strong>{count}</strong></span>"
+
+            if len(instance_desc_bar) == 0:
+                index.write("No Instances")
+            else:
+                index.write(instance_desc_bar)
+
+                #<p><span title=\"{instance_count} Instances\">🌐 <strong>{instance_count}</strong></span> • <span title=\"{onion_instance_count} Onion Instances\">🧅 <strong>{onion_instance_count}</strong></span> • <span title=\"{i2p_instance_count} I2P Instances\">⬤ <strong>{i2p_instance_count}</strong></span> • <span title=\"{loki_instance_count} Lokinet Instances\">⧖ <strong>{loki_instance_count}</strong></span></p>
+            index.write(f"""</p>
                 <blockquote class="no-margin">
                 <p class="no-margin">{project_short_description}</p>
                 </blockquote>
@@ -141,11 +162,6 @@ def generate_projects(config: dict):
         description = project.get("description") or ""
         screenshots = project.get("screenshots") or []
         main_contributors = project.get("main_contributors") or []
-
-        instances = project.get("instances") or []
-        onion_instances = project.get("onion_instances") or []
-        i2p_instances = project.get("i2p_instances") or []
-        loki_instances = project.get("loki_instances") or []
 
         official_tools = project.get("official_tools") or []
         unofficial_tools = project.get("unofficial_tools") or []
@@ -183,51 +199,23 @@ def generate_projects(config: dict):
                     else:
                         f.write(f"<li>{c_name}</li>")
                 f.write("<br>")
+            
+            for itype in config["instance_types"]:
+                instances = project.get(itype["list_name"]) or []
+                count = len(instances)
+                icon = itype["icon"]
+                iid = itype["id"]
+                name = itype["name"] + " Instances"
+                protocol = itype["protocol"]
 
-            # Instances
-            if len(instances) > 0:
-                f.write("<h2>🌐 Instances (" + str(len(instances)) + ")</h2>")
-                f.write(f"<p>If you want to use this list of instances in your project, just refer to <a href=\"https://simple-web.org/instances/{id_}\">https://simple-web.org/instances/{id_}</a></p>")
+                if count > 0:
+                    f.write(f"<h2>{icon} {name} ({count})</h2>")
+                    f.write(f"<p>If you want to use this list of instances in your project, just refer to <a href=\"https://simple-web.org/instances/{id_}{iid}\">https://simple-web.org/instances/{id_}{iid}</a></p>")
 
-                f.write("<ul>")
-                for instance in instances:
-                    f.write(f"<li><a href=\"https://{instance}\">{instance}</a></li>")
-
-                f.write("</ul>")
-
-
-            # Onion Instances
-            if len(onion_instances) > 0:
-                f.write("<h2>🧅 Onion Instances (" + str(len(onion_instances)) + ")</h2>")
-                f.write(f"<p>If you want to use this list of instances in your project, just refer to <a href=\"https://simple-web.org/instances/{id_}_onion\">https://simple-web.org/instances/{id_}_onion</a></p>")
-
-                f.write("<ul>")
-                for instance in onion_instances:
-                    f.write(f"<li><a href=\"http://{instance}\">{instance}</a></li>")
-
-                f.write("</ul>")
-
-            # I2P Instances
-            if len(i2p_instances) > 0:
-                f.write("<h2>⬤ I2P Instances (" + str(len(i2p_instances)) + ")</h2>")
-                f.write(f"<p>If you want to use this list of instances in your project, just refer to <a href=\"https://simple-web.org/instances/{id_}_onion\">https://simple-web.org/instances/{id_}_i2p</a></p>")
-
-                f.write("<ul>")
-                for instance in i2p_instances:
-                    f.write(f"<li><a href=\"http://{instance}\">{instance}</a></li>")
-
-                f.write("</ul>")
-
-            # Lokinet Instances
-            if len(loki_instances) > 0:
-                f.write("<h2>⧖ Lokinet Instances (" + str(len(loki_instances)) + ")</h2>")
-                f.write(f"<p>If you want to use this list of instances in your project, just refer to <a href=\"https://simple-web.org/instances/{id_}_onion\">https://simple-web.org/instances/{id_}_loki</a></p>")
-
-                f.write("<ul>")
-                for instance in loki_instances:
-                    f.write(f"<li><a href=\"http://{instance}\">{instance}</a></li>")
-
-                f.write("</ul>")
+                    f.write("<ul>")
+                    for instance in instances:
+                        f.write(f"<li><a href=\"{protocol}://{instance}\">{instance}</a></li>")
+                    f.write("</ul>")
 
             f.write("<h3>Want your instance to be added to the list?</h2>")
             f.write("<p>You can refer to the <a href=\"https://codeberg.org/SimpleWeb/Website/src/branch/master/README.md\">README.md</a> of this Website for more information.</p>")
@@ -283,31 +271,17 @@ def generate_instances(config: dict):
     for project in config["projects"]:
         id_ = project["id"]
         name = project.get("name") or "Unnamed Project"
-        instances = project.get("instances") or []
-        onion_instances = project.get("onion_instances") or []
-        i2p_instances = project.get("i2p_instances") or []
-        loki_instances = project.get("loki_instances") or []
 
-        if len(instances) > 0:
-            with open(f"instances/{id_}", "w") as f:
-                for instance in instances:
-                    f.write(f"{instance}\n")
+        for itype in config["instance_types"]:
+            instances = project.get(itype["list_name"]) or []
+            count = len(instances)
+            display_name = itype["name"] + " Instances"
+            iid = itype["id"]
 
-        if len(onion_instances) > 0:
-            with open(f"instances/{id_}_onion", "w") as f:
-                for instance in onion_instances:
-                    f.write(f"{instance}\n")
-
-        if len(i2p_instances) > 0:
-            with open(f"instances/{id_}_i2p", "w") as f:
-                for instance in i2p_instances:
-                    f.write(f"{instance}\n")
-
-        if len(loki_instances) > 0:
-            with open(f"instances/{id_}_loki", "w") as f:
-                for instance in loki_instances:
-                    f.write(f"{instance}\n")
-
+            if count > 0:
+                with open(f"instances/{id_}{iid}", "w") as f:
+                    for instance in instances:
+                        f.write(f"{instance}\n")
 
 if __name__ == "__main__":
     config = load_config()

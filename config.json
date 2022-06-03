@@ -9,6 +9,36 @@
         }
 
     },
+    "instance_types": [
+        {
+            "name": "Clearweb",
+            "id": "",
+            "icon": "🌐",
+            "list_name": "instances",
+            "protocol": "https"
+        },
+        {
+            "name": "Onion",
+            "id": "_onion",
+            "icon": "🧅",
+            "list_name": "onion_instances",
+            "protocol": "http"
+        },
+        {
+            "name": "I2P",
+            "id": "_i2p",
+            "icon": "⬤",
+            "list_name": "i2p_instances",
+            "protocol": "http"
+        },
+        {
+            "name": "Lokinet",
+            "id": "_loki",
+            "icon": "⧖",
+            "list_name": "loki_instances",
+            "protocol": "http"
+        }
+    ],
     "projects": [
         {
             "id": "simplytranslate",
