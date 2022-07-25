@@ -25,6 +25,18 @@ img {
     width: 250px;
 }
 
+table {
+    width: 100%;
+    margin: 25px 0;
+    padding: 12px 15px;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid;
+}
+
 @media screen and (prefers-color-scheme: dark) {
     body {
         background-color: #101316;
@@ -140,6 +152,45 @@ def generate_index(config: dict):
             </section>
             """)
 
+        if len(config["other_frontends"]) > 0:
+            index.write("""
+                <h2>Other Frontends</h2>
+                <p>These are some other frontends that we would like to promote, these are <span style="color: red">NOT part of the Simple Web Project</span></p>
+                <p>Also check out the Libredirect Browser Extension: <a href="https://libredirect.github.io">LibRedirect</a></p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Frontend For</th>
+                        <th>Source Code</th>
+                    </tr>
+            """)
+
+            for other_frontend in config["other_frontends"]:
+                frontend_name = other_frontend["name"]
+                frontend_for_name = other_frontend["frontend_for"]["name"]
+                frontend_for_link = other_frontend["frontend_for"]["link"]
+                frontend_source = other_frontend["source_code"]
+                frontend_website = other_frontend["website"]
+
+                source_forge = "Source Code"
+                if frontend_source.startswith("https://sr.ht") or frontend_source.startswith("https://git.sr.ht"):
+                    source_forge = "Sourcehut"
+                elif frontend_source.startswith("https://github.com"):
+                    source_forge = "Github"
+                elif frontend_source.startswith("https://gitlab.com"):
+                    source_forge = "Gitlab"
+                elif frontend_source.startswith("https://codeberg.org"):
+                    source_forge = "Codeberg"
+
+                index.write(f"""
+                    <tr>
+                        <td><a href="{frontend_website}">{frontend_name}</a></td>
+                        <td><a href="{frontend_for_link}">{frontend_for_name}</a></td>
+                        <td><a href="{frontend_source}">{source_forge}</a></td>
+                    </tr>
+                """)
+
+            index.write("</table>")
 
         matrix_homeserver = config["contact"]["matrix"]["homeserver"]
         matrix_room = config["contact"]["matrix"]["room"]
@@ -262,7 +313,6 @@ def generate_projects(config: dict):
 
             f.write(f"<a href=\"../index.html\">Go Back</a> | <a href=\"{source_code}\">Source Code</a>")
             f.write(generic_ending)
-
 
 def generate_instances(config: dict):
     if not os.path.exists("instances"):

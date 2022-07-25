@@ -130,16 +130,6 @@
                     "name": "stcli",
                     "link": "https://git.076.ne.jp/novaburst/stcli"
                 }
-            ],
-            "shoutouts": [
-                {
-                    "name": "gtranslate",
-                    "link": "https://git.sr.ht/~yerinalexey/gtranslate"
-                },
-                {
-                    "name": "Lingva Translate",
-                    "link": "https://github.com/TheDavidDelta/lingva-translate"
-                }
             ]
         },
         {
@@ -226,6 +216,161 @@
                     "src": "porninvidious.png"
                 }
             ]
+        }
+    ],
+    "other_frontends": [
+        {
+            "name": "Lingva Translate",
+            "frontend_for": {
+                "name": "Google Translate",
+                "link": "https://translate.google.com"
+            },
+            "source_code": "https://github.com/TheDavidDelta/lingva-translate",
+            "website": "https://lingva.ml"
+        },
+        {
+            "name": "Scribe",
+            "frontend_for": {
+                "name": "Medium",
+                "link": "https://medium.com"
+            },
+            "source_code": "https://sr.ht/~edwardloveall/Scribe/",
+            "website": "https://scribe.rip"
+        },
+        {
+            "name": "Quetre",
+            "frontend_for": {
+                "name": "Quora",
+                "link": "https://quora.com"
+            },
+            "source_code": "https://github.com/zyachel/quetre",
+            "website": "https://quetre.herokuapp.com"
+        },
+        {
+            "name": "LibremDb",
+            "frontend_for": {
+                "name": "IMDb",
+                "link": "https://imdb.com"
+            },
+            "source_code": "https://github.com/zyachel/libremdb",
+            "website": "https://libremdb.herokuapp.com"
+        },
+        {
+            "name": "Bibliogram",
+            "frontend_for": {
+                "name": "Instagram",
+                "link": "https://instagram.com"
+            },
+            "source_code": "https://sr.ht/~cadence/bibliogram",
+            "website": "https://bibliogram.art"
+        },
+        {
+            "name": "Invidious",
+            "frontend_for": {
+                "name": "YouTube",
+                "link": "https://youtube.com"
+            },
+            "source_code": "https://github.com/iv-org/invidious",
+            "website": "https://invidious.io"
+        },
+        {
+            "name": "Piped",
+            "frontend_for": {
+                "name": "YouTube",
+                "link": "https://youtube.com"
+            },
+            "source_code": "https://github.com/TeamPiped/Piped",
+            "website": "https://piped.kavin.rocks"
+        },
+        {
+            "name": "Beatbump",
+            "frontend_for": {
+                "name": "YouTube Music",
+                "link": "https://music.youtube.com"
+            },
+            "source_code": "https://github.com/snuffyDev/Beatbump",
+            "website": "https://beatbump.ml"
+        },
+        {
+            "name": "Nitter",
+            "frontend_for": {
+                "name": "Twitter",
+                "link": "https://twitter.com"
+            },
+            "source_code": "https://github.com/zedeus/nitter",
+            "website": "https://nitter.net"
+        },
+        {
+            "name": "ProxiTok",
+            "frontend_for": {
+                "name": "TikTok",
+                "link": "https://tiktok.com"
+            },
+            "source_code": "https://github.com/pablouser1/ProxiTok",
+            "website": "https://proxitok.herokuapp.com"
+        },
+        {
+            "name": "libreddit",
+            "frontend_for": {
+                "name": "Reddit",
+                "link": "https://reddit.com"
+            },
+            "source_code": "https://github.com/spikecodes/libreddit",
+            "website": "https://libreddit.spike.codes"
+        },
+        {
+            "name": "teddit",
+            "frontend_for": {
+                "name": "Reddit",
+                "link": "https://reddit.com"
+            },
+            "source_code": "https://codeberg.org/teddit/teddit",
+            "website": "https://teddit.net"
+        },
+        {
+            "name": "Rimgo",
+            "frontend_for": {
+                "name": "Imgur",
+                "link": "https://imgur.com"
+            },
+            "source_code": "https://codeberg.org/video-prize-ranch/rimgo",
+            "website": "https://i.bcow.xyz"
+        },
+        {
+            "name": "Wikiless",
+            "frontend_for": {
+                "name": "Wikipedia",
+                "link": "https://wikipedia.org"
+            },
+            "source_code": "https://codeberg.org/orenom/wikiless",
+            "website": "https://wikiless.org"
+        },
+        {
+            "name": "Neuters",
+            "frontend_for": {
+                "name": "Reuters",
+                "link": "https://reuters.com"
+            },
+            "source_code": "https://github.com/HookedBehemoth/neuters",
+            "website": "https://neuters.de"
+        },
+        {
+            "name": "Librarian",
+            "frontend_for": {
+                "name": "Odysee",
+                "link": "https://odysee.com"
+            },
+            "source_code": "https://codeberg.org/librarian/librarian",
+            "website": "https://lbry.bcow.xyz"
+        },
+        {
+            "name": "Whoogle",
+            "frontend_for": {
+                "name": "Google",
+                "link": "https://google.com"
+            },
+            "source_code": "https://github.com/benbusby/whoogle-search",
+            "website": "https://benbusby.com/projects/whoogle-search"
         }
     ]
 }
