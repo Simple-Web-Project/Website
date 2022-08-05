@@ -302,6 +302,15 @@
             "website": "https://beatbump.ml"
         },
         {
+            "name": "Hyperpipe",
+            "frontend_for": {
+                "name": "YouTube Music",
+                "link": "https://music.youtube.com"
+            },
+            "source_code": "https://codeberg.org/HyperPipe/HyperPipe",
+            "website": "https://hyperpipe.surge.sh"
+        },
+        {
             "name": "Nitter",
             "frontend_for": {
                 "name": "Twitter",
