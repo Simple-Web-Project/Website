@@ -134,6 +134,27 @@
             ]
         },
         {
+            "id": "simpleamazon",
+            "name": "SimpleAmazon",
+            "short_description": "A frontend for Amazon",
+            "description": "A frontend for Amazon, currently only supports searching, product pages are not implemented yet",
+            "notice": "BETA",
+            "source_code": "https://codeberg.org/SimpleWeb/SimpleAmazon",
+            "screenshots": [
+                {
+                    "description": "Screenshot of SimpleAmazon Frontpage",
+                    "src": "simpleamazon_1.png"
+                },
+                {
+                    "description": "Screenshot of SimpleAmazon Search Results for 'de' and 'Yubico YubiKey'",
+                    "src": "simpleamazon_2.png"
+                }
+            ],
+            "instances": [
+                "amazon.simple-web.org"
+            ]            
+        },
+        {
             "id": "simpleertube",
             "name": "SimpleerTube",
             "short_description": "A frontend for SepiaSearch and PeerTube",
