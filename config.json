@@ -152,8 +152,13 @@
                 }
             ],
             "instances": [
-                "amazon.simple-web.org"
-            ]            
+                "amazon.simple-web.org",
+                "simpleamazon.esmailelbob.xyz"
+            ],
+            "onion_instances": [
+                "simpleamazon.lqs5fjmajyp7rvp4qvyubwofzi6d4imua7vs237rkc4m5qogitqwrgyd.onion"
+            ]
+
         },
         {
             "id": "simpleertube",
