@@ -155,10 +155,15 @@
             ],
             "instances": [
                 "amazon.simple-web.org",
-                "simpleamazon.esmailelbob.xyz"
+                "simpleamazon.esmailelbob.xyz",
+                "az.vern.cc"
             ],
             "onion_instances": [
-                "simpleamazon.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion"
+                "simpleamazon.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion",
+                "az.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion"
+            ],
+            "i2p_instances": [
+                "vernlncxo4aswplv7naacpjvp5ts4uhrv4wbv3y4skufdbz763gq.b32.i2p"
             ]
 
         },
