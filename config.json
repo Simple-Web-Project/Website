@@ -425,6 +425,33 @@
             },
             "source_code": "https://github.com/benbusby/whoogle-search",
             "website": "https://benbusby.com/projects/whoogle-search"
+        },
+        {
+            "name": "dumb",
+            "frontend_for": {
+                "name": "Genius",
+                "link": "https://genius.com"
+            },
+            "source_code": "https://github.com/rramiachraf/dumb",
+            "website": "https://github.com/rramiachraf/dumb"
+        },
+        {
+            "name": "AnonymousOverflow",
+            "frontend_for": {
+                "name": "StackOverflow",
+                "link": "https://stackoverflow.com"
+            },
+            "source_code": "https://github.com/httpjamesm/AnonymousOverflow",
+            "website": "https://code.whatever.social"
+        },
+        {
+            "name": "GotHub",
+            "frontend_for": {
+                "name": "GitHub",
+                "link": "https://github.com"
+            },
+            "source_code": "https://codeberg.org/gothub/gothub",
+            "website": "https://codeberg.org/gothub/gothub"
         }
     ]
 }
