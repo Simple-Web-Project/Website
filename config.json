@@ -451,6 +451,33 @@
             },
             "source_code": "https://codeberg.org/gothub/gothub",
             "website": "https://codeberg.org/gothub/gothub"
+        },
+        {
+            "name": "Laboratory",
+            "frontend_for": {
+                "name": "GitLab",
+                "link": "https://gitlab.com"
+            },
+            "source_code": "https://git.vitali64.duckdns.org/utils/laboratory.git",
+            "website": "https://git.vitali64.duckdns.org/utils/laboratory.git"
+        },
+        {
+            "name": "Suds",
+            "frontend_for": {
+                "name": "Snopes",
+                "link": "https://snopes.com"
+            },
+            "source_code": "https://git.vern.cc/cobra/suds",
+            "website": "https://git.vern.cc/cobra/suds"
+        },
+        {
+            "name": "Destructables",
+            "frontend_for": {
+                "name": "Indestructables",
+                "link": "https://indestructables.com"
+            },
+            "source_code": "https://git.vern.cc/cobra/destructables",
+            "website": "https://git.vern.cc/cobra/destructables"
         }
     ]
 }
