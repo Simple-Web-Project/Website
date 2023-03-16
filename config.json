@@ -240,26 +240,6 @@
                     "link": "https://manerakai.com"
                 }
             ]
-        },
-        {
-            "id": "porninvidious",
-            "name": "PornInvidious",
-            "short_description": "A frontend to xvideos.com",
-            "description": "A frontend to xvideos.com",
-            "notice": "NSFW!",
-            "source_code": "https://codeberg.org/SimpleWeb/PornInvidious",
-            "screenshots": [
-                {
-                    "description": "Screenshot of PornInvidious Homescreen, showing 6 Thumbnails",
-                    "src": "porninvidious.png"
-                }
-            ],
-            "instances": [
-                "porninvidious.esmailelbob.xyz"
-            ],
-            "onion_instances": [
-                "porninvidious.esmail5pdn24shtvieloeedh7ehz3nrwcdivnfhfcedl7gf4kwddhkqd.onion"
-            ]
         }
     ],
     "other_frontends": [
